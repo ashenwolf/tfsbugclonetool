@@ -1,0 +1,83 @@
+﻿<UserControl 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+  <UserControl.Resources>
+  </UserControl.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid Grid.Row="0" Margin="2">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="40*" />
+        <ColumnDefinition Width="20*" />
+        <ColumnDefinition Width="20*" />
+      </Grid.ColumnDefinitions>
+
+      <TextBlock Text="Project: " Grid.Column="0" VerticalAlignment="Center" />
+      <ComboBox Grid.Column="1" Margin="2"
+                ItemsSource="{Binding Projects}"
+                SelectedItem="{Binding SelectedProject}"
+                IsSynchronizedWithCurrentItem="True"/>
+
+      <ComboBox Grid.Column="2" Margin="2"
+                ItemsSource="{Binding States}"
+                SelectedItem="{Binding SelectedState}" />
+
+      <ComboBox Grid.Column="3" Margin="2"
+                ItemsSource="{Binding Reasons}"
+                SelectedItem="{Binding SelectedReason}" />
+    </Grid>
+
+    <ListBox Grid.Row="1"  Margin="2" HorizontalContentAlignment="Stretch" SelectionMode="Extended" Cursor="Hand"
+             ItemsSource="{Binding Items}" x:Name="ProjectBugsListBox">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Grid HorizontalAlignment="Stretch">
+            <Grid.Width>
+              <Binding Path="ActualWidth" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollContentPresenter}}" />
+            </Grid.Width>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="4" />
+              <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,2" VerticalAlignment="Stretch" Fill="Orange" />
+            <Grid Grid.Column="1" Margin="4" Background="{x:Null}">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+
+              <TextBlock Text="{Binding Id}" TextBlock.FontWeight="Bold" Grid.Row="0" Grid.Column="0" />
+              <TextBlock Text="{Binding Reason}" TextBlock.FontWeight="Bold" Grid.Row="0" Grid.Column="2" />
+              <TextBlock Text="{Binding Title}" TextWrapping="Wrap" TextBlock.FontSize="11" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,2,0,0" />
+            </Grid>
+          </Grid>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+    
+    <Grid Grid.Row="2">
+      
+      <Button Content="Clone selected bugs"
+              CommandParameter="{Binding ElementName=ProjectBugsListBox, Path=SelectedItems}"
+              Command="{Binding CloneSelectedBugsCommand}"/>
+    </Grid>
+  </Grid>
+</UserControl>

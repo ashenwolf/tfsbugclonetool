@@ -1,0 +1,14 @@
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\obj\x86\Debug\TFSBugCloneTool.fsprojResolveAssemblyReference.cache
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\obj\x86\Debug\TFSBugCloneTool.g.resources
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\TFSBugCloneTool.exe.config
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\TFSBugCloneTool.XML
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\TFSBugCloneTool.exe
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\TFSBugCloneTool.pdb
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\FSharp.Core.dll
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\FSharp.ViewModule.Core.Wpf.dll
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\FsXaml.Wpf.dll
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\FsXaml.Wpf.TypeProvider.dll
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\System.Windows.Interactivity.dll
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\bin\Debug\FSharp.Core.xml
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\obj\x86\Debug\TFSBugCloneTool.exe
+D:\MD\Dev\Tools\TFSBugCloneTool\TFSBugCloneTool\TFSBugCloneTool\obj\x86\Debug\TFSBugCloneTool.pdb
